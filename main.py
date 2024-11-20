@@ -48,7 +48,7 @@ with  view_tab:
     # Display the table in Streamlit
     st.write("log:")
     st.write(df)
-#new code
+
       # Add delete buttons
     for index, row in df.iterrows():
         if st.button(f'Delete row {index}'):
