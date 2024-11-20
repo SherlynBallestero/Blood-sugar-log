@@ -44,7 +44,7 @@ with  view_tab:
     # Create a DataFrame from the JSON data
     df = pd.DataFrame.from_dict(json_data, orient='index').reset_index()
     df.columns = ['Index', questions[0], questions[1], questions[2], questions[3]]
-    
+    df.drop(columns='Index', inplace=True)
     # Display the table in Streamlit
     st.write("log:")
     st.write(df)
